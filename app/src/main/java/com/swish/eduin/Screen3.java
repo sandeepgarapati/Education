@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -45,6 +46,17 @@ public class Screen3 extends AppCompatActivity {
         }
         Adaptor adaptor = new Adaptor(Screen3.this, 0);
         list.setAdapter(adaptor);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.e("Post",position+"");
+                Intent confirm = new Intent(Screen3.this, Screen5.class);
+                confirm.putExtra("value",position+"");
+                startActivity(confirm);
+            }
+        });
+
 
     }
 
@@ -91,12 +103,21 @@ public class Screen3 extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.more_tab_menu, menu);
-
-        // return true so that the menu pop up is opened
+        getMenuInflater().inflate(R.menu.more_tab_menu, menu);
         return true;
+    }
+
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.fav) {
+            Intent fintent = new Intent(Screen3.this,Favortieslist.class);
+            startActivity(fintent);
+            return false;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -4,6 +4,6 @@
         android:drawable="@drawable/filledheart_img"/> <!-- pressed -->
     <item android:state_focused="true"
         android:drawable="@drawable/filledheart_img"/> <!-- focused -->
-    <item android:drawable="@drawable/heartimg"/> <!-- default -->
+  /*  <item android:drawable="@drawable/heartimg"/> <!-- default -->
 
 </selector>

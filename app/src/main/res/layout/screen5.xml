@@ -63,16 +63,17 @@
                 android:layout_marginTop="21dp"
                 android:src="@drawable/circle_img" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/favourite"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/fav_button"
+                android:background="@drawable/selector"
                 android:layout_alignParentEnd="true"
                 android:onClick="favourite"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="5dp"
-                android:layout_alignParentRight="true" />
+                android:layout_alignParentRight="false" />
+
 
             <Button
                 android:id="@+id/website"
@@ -97,7 +98,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_toEndOf="@id/website"
                 android:background="@drawable/buttonimg"
-                android:onClick="directions"
+
                 android:text="directions"
                 android:textColor="#FFFFFF"
                 android:layout_toRightOf="@id/website" />
@@ -147,7 +148,6 @@
                 android:layout_below="@id/website"
                 android:layout_toEndOf="@id/address"
                 android:layout_toRightOf="@id/address"
-                android:text="18th K.M. Bannerghatta Main Road, Bengaluru, Karnataka 560083"
                 android:textSize="20dp"
                 android:layout_marginLeft="6dp"
                 android:textColor="#FFFFFF" />
@@ -169,7 +169,7 @@
                 android:layout_below="@id/textView"
                 android:layout_marginTop="20dp"
                 android:layout_toRightOf="@id/phoneimg"
-                android:text="Phone:"
+                android:text="Phone:7766554433"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:layout_marginLeft="6dp"
@@ -184,10 +184,8 @@
                 android:layout_below="@id/textView"
                 android:layout_toEndOf="@id/phone"
                 android:layout_toRightOf="@id/phone"
-                android:text="099020 44113"
                 android:layout_marginLeft="6dp"
-                android:textSize="20dp"
-                android:textColor="#FFFFFF" />
+                android:textSize="20dp" />
 
             <ImageView
                 android:id="@+id/coursesimg"
@@ -206,7 +204,7 @@
                 android:layout_below="@id/textView2"
                 android:layout_marginTop="20dp"
                 android:layout_toRightOf="@id/coursesimg"
-                android:text="Courses Offered:"
+                android:text="Courses Offered:ICSC,CBSE"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:layout_marginLeft="6dp"
@@ -243,7 +241,7 @@
                 android:layout_toRightOf="@id/extraimg"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="6dp"
-                android:text="Extra Curricular:"
+                android:text="Extra Curricular:Arobics,basketball"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF" />
@@ -256,7 +254,7 @@
                 android:layout_below="@id/textView3"
                 android:layout_toEndOf="@id/extracurricular"
                 android:layout_toRightOf="@id/extracurricular"
-                android:text="TextView"
+                android:text=" "
                 android:layout_marginLeft="6dp"
                 android:textSize="20dp"
                 android:textColor="#FFFFFF" />
